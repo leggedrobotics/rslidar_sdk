@@ -1,5 +1,7 @@
 # **rslidar_sdk**
 
+**NOTE**: remember to init and update submodule - see "Download via Git" here below
+
  [中文介绍](README_CN.md) 
 
 ## 1 Introduction
