@@ -55,9 +55,10 @@ namespace lidar
 /************************************************************************/
 inline sensor_msgs::PointCloud2 toRosMsg(const LidarPointCloudMsg& rs_msg)
 {
+  double timestamp = rs_msg.timestamp - 0.05;
   sensor_msgs::PointCloud2 ros_msg;
   pcl::toROSMsg(*rs_msg.point_cloud_ptr, ros_msg);
-  ros_msg.header.stamp = ros_msg.header.stamp.fromSec(rs_msg.timestamp);
+  ros_msg.header.stamp = ros_msg.header.stamp.fromSec(timestamp);
   ros_msg.header.frame_id = rs_msg.frame_id;
   ros_msg.header.seq = rs_msg.seq;
   return ros_msg;
