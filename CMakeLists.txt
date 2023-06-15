@@ -183,6 +183,13 @@ if(roscpp_FOUND)
             LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
             ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
 
+    install(DIRECTORY
+      config
+      launch
+      rviz
+      DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+
+
   endif()
 
 endif(roscpp_FOUND)
