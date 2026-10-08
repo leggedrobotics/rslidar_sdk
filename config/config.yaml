@@ -29,6 +29,10 @@ lidar:
 
       start_angle: 0               #  Start angle of point cloud
       end_angle: 360               #  End angle of point cloud
+      split_angle: 180             #  Azimuth (deg) where one frame ends and the next begins. 0 (the
+                                   #  default) is straight ahead; 180 is behind the lidar, which the
+                                   #  robot body occludes, so the seam of the motion-skewed sweep
+                                   #  falls where there are no points
 
                                    #  When msg_source is 3, the following parameters will be used
       pcap_repeat: true            #  true: The pcap bag will repeat play   
